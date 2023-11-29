@@ -27,7 +27,7 @@ public class Ladder {
                 .collect(Collectors.toList());
     }
 
-    public List<Line> readOnlyLines() {
+    public List<Line> lines() {
         return Collections.unmodifiableList(lines);
     }
 }

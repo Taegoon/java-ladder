@@ -23,15 +23,13 @@ public class InputView {
     }
 
     private void isEmpty(String inputText) {
-        if (inputText == null
-                || inputText.trim().isEmpty()) {
+        if (inputText == null || inputText.trim().isEmpty()) {
             throw new IllegalArgumentException("참여자가 없습니다.");
         }
     }
 
     private String isNameLengthFiveOver(String name) {
-        if (name.isEmpty()
-                || name.length() > NAME_MAX_LENGTH) {
+        if (name.isEmpty() || name.length() > NAME_MAX_LENGTH) {
             throw new IllegalArgumentException("사람 이름은 1~5글자야 합니다.");
         }
         return name;

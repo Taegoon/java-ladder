@@ -17,8 +17,7 @@ public class ResultView {
     }
 
     public void printPerson(List<String> person) {
-        person.stream()
-                .forEach(this::printName);
+        person.stream().forEach(this::printName);
         System.out.println(EMPTY);
     }
 
@@ -27,15 +26,13 @@ public class ResultView {
     }
 
     public void printLadder(Ladder ladder) {
-        ladder.readOnlyLines().stream()
-                .forEach(this::printLine);
+        ladder.lines().stream().forEach(this::printLine);
     }
 
     private void printLine(Line line) {
         System.out.print(String.format("%5s", EMPTY));
         List<Boolean> points = line.readOnlyPoints();
-        IntStream.range(0, points.size())
-                .forEach(index -> printPoints(points, index));
+        IntStream.range(0, points.size()).forEach(index -> printPoints(points, index));
         System.out.println(EMPTY);
     }
 

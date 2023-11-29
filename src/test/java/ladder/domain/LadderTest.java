@@ -17,7 +17,7 @@ public class LadderTest {
 
         int countOfPerson = 5;
         Ladder ladder = new Ladder(countOfPerson, ladderSize);
-        List<Line> lines = ladder.readOnlyLines();
+        List<Line> lines = ladder.lines();
         assertThat(lines.size()).isEqualTo(ladderSize);
     }
 

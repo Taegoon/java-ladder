@@ -40,8 +40,7 @@ public class Line {
             return addPoint(points, Boolean.FALSE);
         }
         if (!isMaxSize(downGradeMaxSize, points)) {
-            Boolean point = points.get(points.size() - MINUS_INDEX_SIZE)
-                    ? false : pointStrategy.isPoint();
+            Boolean point = !points.get(points.size() - MINUS_INDEX_SIZE) && pointStrategy.isPoint();
             recursionPoint(downGradeMaxSize, addPoint(points, point));
         }
         return points;
